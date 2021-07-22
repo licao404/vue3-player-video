@@ -24,8 +24,8 @@
             {{ time.display }}&nbsp;/&nbsp;{{ duration }}
           </div>
           <div class="mr-5">
-            <img v-show="playing" src="https://en-zo.dev/vue-videoplayer/basic/pause.svg" alt="Icon pause video" class="w-4 cursor-pointer filter-white transition duration-300" @click="$emit('play')">
-            <img v-show="!playing" src="https://en-zo.dev/vue-videoplayer/basic/play.svg" alt="Icon play video" class="w-4 cursor-pointer filter-white transition duration-300" @click="$emit('play')">
+            <img v-show="playing" src="https://ali-ec.static.yximgs.com/kos/nlav11347/kwaishop-fuwu-market/pause.svg" alt="Icon pause video" class="w-4 cursor-pointer filter-white transition duration-300" @click="$emit('play')">
+            <img v-show="!playing" src="https://ali-ec.static.yximgs.com/kos/nlav11347/kwaishop-fuwu-market/play-arrow.svg" alt="Icon play video" class="w-4 cursor-pointer filter-white transition duration-300" @click="$emit('play')">
           </div>
           <div class="w-full h-1 bg-white bg-opacity-40 rounded-sm cursor-pointer mr-6" @click="e => $emit('position', e)">
             <div class="w-full rounded-sm h-full bg-white pointer-events-none" :style="`width: ${time.progress}%; transition: width .2s ease-in-out;`" />
@@ -36,14 +36,14 @@
                 <input v-model="amount" type="range" step="0.05" min="0" max="1" class="rounded-lg overflow-hidden appearance-none bg-white bg-opacity-30 h-1.5 w-128 vertical-range">
               </div>
             </div>
-            <img :src="`https://en-zo.dev/vue-videoplayer/basic/volume_${Math.ceil(amount * 2)}.svg`" alt="High volume video" class="w-5 cursor-pointer filter-white transition duration-300 relative" style="z-index: 2" @click="stopVolume" @mouseenter="volume = true">
+            <img src="https://ali-ec.static.yximgs.com/kos/nlav11347/kwaishop-fuwu-market/volume-up.svg" alt="High volume video" class="w-5 cursor-pointer filter-white transition duration-300 relative" style="z-index: 2" @click="stopVolume" @mouseenter="volume = true">
           </div>
-          <img src="https://en-zo.dev/vue-videoplayer/basic/fullscreen.svg" alt="Fullscreen" class="w-4 cursor-pointer filter-white transition duration-300" @click="$emit('fullScreen')">
+          <img src="https://ali-ec.static.yximgs.com/kos/nlav11347/kwaishop-fuwu-market/fullscreen.svg" alt="Fullscreen" class="w-4 cursor-pointer filter-white transition duration-300" @click="$emit('fullScreen')">
         </div>
       </div>
       <div v-if="!autoplay && mask && time.current === 0" :class="`transition transform duration-300 absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 backdrop-filter z-10 flex items-center justify-center ${playing ? 'opacity-0 pointer-events-none' : ''}`">
         <div class="w-20 h-20 rounded-full bg-white bg-opacity-20 transition duration-200 hover:bg-opacity-40 flex items-center justify-center cursor-pointer" @click="$emit('play')">
-          <img src="https://en-zo.dev/vue-videoplayer/play.svg" alt="Icon play video" class="transform translate-x-0.5 w-12">
+          <img src="https://ali-ec.static.yximgs.com/kos/nlav11347/kwaishop-fuwu-market/play.svg" alt="Icon play video" class="transform translate-x-0.5 w-12">
         </div>
       </div>
     </div>
