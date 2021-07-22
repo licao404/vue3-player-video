@@ -145,6 +145,11 @@ export default /*#__PURE__*/defineComponent({
 
 <style>
 @import './assets/tailwind.css';
+.vue3-player-video img,
+.vue3-player-video video {
+  display: block;
+  vertical-align: middle;
+}
 .overlay {
   background: linear-gradient(0deg, #0000006b, transparent)
 }
