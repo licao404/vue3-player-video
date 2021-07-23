@@ -1,5 +1,5 @@
 <template>
-  <div class="shadow-xl rounded-3xl overflow-hidden relative" @mouseenter="hovered = true" @mouseleave="hovered = false" @keydown.left="$emit('play')">
+  <div class="overflow-hidden relative" @mouseenter="hovered = true" @mouseleave="hovered = false" @keydown.left="$emit('play')">
     <div class="relative">
       <video
         :ref="uuid"
