@@ -15,6 +15,11 @@ export default /*#__PURE__*/defineComponent({
       type: Boolean,
       default: false
     },
+    poster: {
+      type: String,
+      required: false,
+      default: '',
+    },
     loop: {
       type: Boolean,
       default: false
@@ -123,6 +128,7 @@ export default /*#__PURE__*/defineComponent({
       :uuid="uuid"
       :src="src"
       :autoplay="autoplay"
+      :poster="poster"
       :loop="loop"
       :controls="controls"
       :mask="mask"
